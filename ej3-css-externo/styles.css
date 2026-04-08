@@ -1,0 +1,56 @@
+/* selector de etiqueta */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f1e6; /* hueso */
+  color: #2f3e2e; /* verde oscuro */
+  margin: 0;
+  padding: 0;
+}
+
+/* selector de clase */
+.contenedor {
+  max-width: 800px;
+  margin: 40px auto; /* centrado */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* títulos */
+h1 {
+  color: #556b2f; /* verde oliva */
+}
+
+h2, h3 {
+  color: #556b2f;
+}
+
+/* navegación */
+nav {
+  margin-bottom: 20px;
+}
+
+/* links */
+nav a {
+  text-decoration: none;
+  color: #556b2f;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* listas */
+ul, ol {
+  padding-left: 20px;
+}
+
+/* imágenes */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
