@@ -1,7 +1,7 @@
 let inputCantidad = document.getElementById("cantidad");
 let boton = document.getElementById("btnGenerar");
 let parrafo = document.getElementById("resultado");
-
+let mensajeError = document.getElementById("mensajeError");
 
 function generarAsteriscos(n)
 {
@@ -20,13 +20,20 @@ function generarAsteriscos(n)
     }
    
 
-boton.addEventListener("click", function()
+boton.addEventListener("click", function ()
 {
-
     let n = Number(inputCantidad.value);
 
-    let resultado = generarAsteriscos (n);
+    if (inputCantidad.value === "" || n < 1)
+    {
+        mensajeError.textContent = "Error: ingresá un número mayor o igual a 1.";
+        resultadoHTML.textContent = "";
+    }
+    else
+    {
+        mensajeError.textContent = "";
 
-    parrafo.innerText = resultado;
-
+        let resultado = generarAsteriscos(n);
+        resultadoHTML.textContent = resultado;
+    }
 });
