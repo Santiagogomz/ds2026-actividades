@@ -92,3 +92,4 @@ function diaDeLaSemana()
 
 }
 
+console.log(diaDeLaSemana())
