@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Catálogo</h1>
+  
+
+    <p>Alta libro: </p>
+
+    <label for="cargaTitulo">Titulo:</label>
+    <input type="text" id="cargaTitulo">
+
+    <label for="cargaAutor">Autor:</label>
+    <input type="text" id="cargaAutor">
+
+     <label for="cargaPrecio">Precio:</label>
+    <input type="number" id="cargaPrecio">
+
+    <label for="cargaGenero">Genero:</label>
+    <input type="text" id="cargaGenero">
+
+    <button id="cargar">Cargar</button>
+
+    <div id="errorForm"></div>
+    <p id="mensajeError"></p>
+
+
+    <p>Buscar libro por autor:</p>
+
+    <label for="filtroAutor">Autor:</label>
+    <input type="text" id="filtroAutor">
+
+    <button id="filtrar">Filtrar</button>
+    <button id="mostrarDisponibles">Disponibles</button>
+    <button id="mostrarTodos">Todos</button>
+
+    <p id="mensajeError"></p>
+
+    <ul id="listado"></ul>
+
+    <p id="stats"></p>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

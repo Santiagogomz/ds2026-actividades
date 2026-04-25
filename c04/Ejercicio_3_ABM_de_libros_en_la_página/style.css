@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a; /* fondo oscuro */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.botonEliminar {
+    margin-left: 10px;
+    padding: 6px 12px;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    white-space: pre; /* IMPORTANTE para ver los saltos de línea */
+}
+#resultado {
+    white-space: pre;
+}
