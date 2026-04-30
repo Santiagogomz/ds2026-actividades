@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iniciar Sesion:</h1>
+
+    <p>Cargue sus datos para iniciar sesion:  </p>
+
+    <label for="cargaNombre">Nombre de Usuario: </label>
+    <input type="text" id="cargaNombre">
+
+
+    <label for="cargaEmail">Email: </label>
+    <input type="text" id="cargaEmail">
+
+    <label for="cargaTelefono">Telefono: </label>
+    <input type="text" id="cargaTelefono">
+
+
+    <button id="cargarTodo">Cargar</button>
+
+
+    <button id="listarUsuarios">Listar usuarios</button>
+
+    <ul id="listaUsuarios"></ul>
+
+
+    <p id="cargando" style="display:none;">Cargando...</p>
+    
+    <div id="errorForm"></div>
+    <p id="mensajeError"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
