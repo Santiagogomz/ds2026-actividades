@@ -1,44 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Librería</title>
+
 </head>
+
 <body>
-    
-<!--<button class="btn btn-primary">¡Hola Bootstrap!</button>-->
 
+    <nav class="navbar navbar-expand-lg navbarCustom">
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
 
-    <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book"></i> Librería
+            </a>
 
-        <a class="navbar-brand" href="index.html">
-            <i class="bi bi-person"></i> Librería
-        </a>
+            <ul class="navbar-nav d-flex flex-row gap-3">
 
-        <ul class="navbar-nav d-flex flex-row gap-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        Inicio
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">Inicio</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html">
+                        Catalogo
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="catalogo.html">Catalogo</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">
+                        Contacto
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
+            </ul>
 
-        </ul>
+        </div>
 
-    </div>
+    </nav>
 
-</nav>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <section class="hero">
+
+        <div class="text-center heroTexto">
+
+            <h1 class="display-2">
+                Bienvenido a la Librería
+            </h1>
+
+            <p class="lead">
+                Descubrí historias fantásticas y legendarias
+            </p>
+
+            <a href="catalogo.html" class="btn botonHero btn-lg">
+                Ver catálogo
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="container mt-5 mb-5">
+
+        <h2 class="text-center mb-4">
+            Destacados de la semana
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="../img/eternauta.jpg" class="card-img-top" alt="Libro">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            El Eternauta
+                        </h5>
+
+                        <p class="card-text">
+                            Héctor Germán Oesterheld
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="../img/mfierro.jpg" class="card-img-top" alt="Libro">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Martín Fierro
+                        </h5>
+
+                        <p class="card-text">
+                            José Hernández
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="../img/aleph.jpg" class="card-img-top" alt="Libro">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            El Aleph
+                        </h5>
+
+                        <p class="card-text">
+                            Jorge Luis Borges
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="../img/cg.jpg" class="card-img-top" alt="Libro">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            La Ciudad de los Geómetras
+                        </h5>
+
+                        <p class="card-text">
+                            Gabriel Darrigran
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="../img/hercules.jpg" class="card-img-top" alt="Libro">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Los Doce Trabajos de Hércules
+                        </h5>
+
+                        <p class="card-text">
+                            Enrique de Villena
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="../img/fic.png" class="card-img-top" alt="Libro">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Ficciones
+                        </h5>
+
+                        <p class="card-text">
+                            Jorge Luis Borges
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footerCustom">
+
+        <p>
+            Librería - 2026
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
