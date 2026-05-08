@@ -80,3 +80,56 @@ body
 
     border-radius: 15px;
 }
+.card img
+{
+    height: 400px;
+
+    object-fit: cover;
+
+    border-top-left-radius: 15px;
+
+    border-top-right-radius: 15px;
+}
+h2
+{
+    color: #4b2e2e;
+}
+.detalleLibro
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.detalleLibro img
+{
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+.detalleLibro h1
+{
+    color: #f3e7d3;
+}
+
+.detalleLibro h4
+{
+    color: #d9c7ae;
+}
+
+.precioLibro
+{
+    color: #f3e7d3;
+
+    margin-top: 20px;
+}
+
+body
+{
+    background-color: #cbb59c;
+}
