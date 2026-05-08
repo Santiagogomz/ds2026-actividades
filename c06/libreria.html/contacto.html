@@ -10,7 +10,7 @@
 </head>
 <body>
     
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbarCustom">
 
     <div class="container">
 
@@ -37,6 +37,93 @@
     </div>
 
 </nav>
+
+
+<main class="container mt-5 mb-5">
+
+    <div class="busquedaContainer">
+
+        <h1 class="text-center mb-4 catalogoTitulo">
+            Contacto
+        </h1>
+
+        <form>
+
+            <div class="mb-3">
+
+                <label for="nombre" class="form-label">
+                    Nombre
+                </label>
+
+                <input type="text" id="nombre" class="form-control" required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="email" class="form-label">
+                    Email
+                </label>
+
+                <input type="email" id="email" class="form-control" required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="asunto" class="form-label">
+                    Asunto
+                </label>
+
+                <select id="asunto" class="form-select" required>
+
+                    <option value="">
+                        Seleccione una opción
+                    </option>
+
+                    <option value="consulta">
+                        Consulta
+                    </option>
+
+                    <option value="reclamo">
+                        Reclamo
+                    </option>
+
+                    <option value="sugerencia">
+                        Sugerencia
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="mensaje" class="form-label">
+                    Mensaje
+                </label>
+
+                <textarea id="mensaje" class="form-control" rows="5" required></textarea>
+
+            </div>
+
+            <button type="submit" class="btn botonHero">
+                Enviar
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<footer class="footerCustom">
+
+    <p>
+        Librería - 2026
+    </p>
+
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
