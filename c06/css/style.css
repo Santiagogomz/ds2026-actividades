@@ -1,6 +1,7 @@
+
 .hero
 {
-    height: 90vh;
+    min-height: 100vh;
 
     background-image: url("../img/imglibreria.png");
 
@@ -132,4 +133,65 @@ h2
 body
 {
     background-color: #cbb59c;
+}
+.busquedaContainer
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    color: white;
+}
+
+.card
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 15px;
+}
+
+.card-title
+{
+    color: #f3e7d3;
+}
+
+.card img
+{
+    height: 400px;
+
+    object-fit: cover;
+}
+
+.form-control
+{
+    background-color: rgba(255,255,255,0.8);
+}
+
+.catalogoTitulo
+{
+    color: #4b2e2e;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main
+{
+    flex: 1;
 }
