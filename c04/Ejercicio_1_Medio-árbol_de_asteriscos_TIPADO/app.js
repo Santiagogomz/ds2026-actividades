@@ -1,4 +1,4 @@
-"use strict";
+
 let inputCantidad = document.getElementById("cantidad");
 let boton = document.getElementById("btnGenerar");
 let parrafo = document.getElementById("resultado");
