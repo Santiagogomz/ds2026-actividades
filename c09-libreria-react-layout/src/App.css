@@ -1,0 +1,248 @@
+
+.hero
+{
+    min-height: 100vh;
+
+    background-image: url("/img/imglibreria.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroTexto
+{
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+.navbarCustom
+{
+    background-color: rgba(60, 55, 50, 0.85);
+}
+
+.navbarCustom .navbar-brand
+{
+    color: #f3e7d3;
+}
+
+.navbarCustom .nav-link
+{
+    color: #f3e7d3;
+}
+
+.navbarCustom .nav-link:hover
+{
+    color: #b08d57;
+}
+.botonHero
+{
+    background-color: #3f5b4b;
+
+    color: white;
+}
+
+.botonHero:hover
+{
+    background-color: #2f4438;
+
+    color: white;
+}
+
+.footerCustom
+{
+    background-color: rgba(60, 55, 50, 0.85);
+
+    color: #f3e7d3;
+
+    text-align: center;
+
+    padding: 10px;
+}
+body
+{
+    background-color: #cbb59c;
+}
+.card
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 15px;
+}
+.card img
+{
+    height: 400px;
+
+    object-fit: cover;
+
+    border-top-left-radius: 15px;
+
+    border-top-right-radius: 15px;
+}
+h2
+{
+    color: #4b2e2e;
+}
+.detalleLibro
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.detalleLibro img
+{
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+.detalleLibro h1
+{
+    color: #f3e7d3;
+}
+
+.detalleLibro h4
+{
+    color: #d9c7ae;
+}
+
+.precioLibro
+{
+    color: #f3e7d3;
+
+    margin-top: 20px;
+}
+
+body
+{
+    background-color: #cbb59c;
+}
+.busquedaContainer
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    color: white;
+}
+
+.card
+{
+    background-color: rgba(110, 59, 59, 0.75);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.35);
+
+    transition: 0.3s;
+}
+
+.card:hover
+{
+    transform: translateY(-5px);
+
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.45);
+}
+.card-title
+{
+    color: #f3e7d3;
+}
+
+.card img
+{
+    height: 400px;
+
+    object-fit: cover;
+}
+
+.form-control
+{
+    background-color: rgba(255,255,255,0.8);
+}
+
+.catalogoTitulo
+{
+    color: #4b2e2e;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main
+{
+    flex: 1;
+}
+
+.likeBtn
+{
+    background: none;
+
+    border: none;
+
+    color: #0d6efd;
+
+    font-size: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.likeBtn:hover
+{
+    color: #0a58ca;
+}
+html, body, #root
+{
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    overflow-x: hidden;
+}
+.seccionLibros
+{
+    background-color: #4b1f1f;
+
+    width: 100%;
+
+    padding: 60px 40px;
+}
+
