@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "titulo": "El Eternauta",
+    "autor": "Héctor Germán Oesterheld",
+    "imagen": "/img/eternauta.jpg",
+    "descripcion": "Una clásica historia de ciencia ficción argentina donde un grupo de sobrevivientes enfrenta una invasión desconocida en Buenos Aires mientras intentan resistir y protegerse.",
+    "precio": 18500,
+    "disponible": true
+  },
+  {
+    "id": 2,
+    "titulo": "Martín Fierro",
+    "autor": "José Hernández",
+    "imagen": "/img/mfierro.jpg",
+    "descripcion": "Poema narrativo fundamental de la literatura argentina que relata la vida del gaucho Martín Fierro y las injusticias que atraviesa en la frontera.",
+    "precio": 12900,
+    "disponible": true
+  },
+  {
+    "id": 3,
+    "titulo": "El Aleph",
+    "autor": "Jorge Luis Borges",
+    "imagen": "/img/aleph.jpg",
+    "descripcion": "Una colección de relatos fantásticos y filosóficos donde Borges explora el infinito, el tiempo y los laberintos de la mente humana.",
+    "precio": 15200,
+    "disponible": true
+  },
+  {
+    "id": 4,
+    "titulo": "La Ciudad de los Geómetras",
+    "autor": "Gabriel Darrigran",
+    "imagen": "/img/cg.jpg",
+    "descripcion": "El libro \"La Ciudad de los Geómetras\" de Gabriel Darrigran trata sobre la fundación de La Plata, abarcando su diseño y planificación. Se centra en la influencia de Dardo Rocha y Pedro Benoit en la creación de la ciudad, considerando factores como las epidemias y el conflicto armado que marcaron su desarrollo. Además, el libro explora la masonería y su impacto en la geometría de la ciudad, ofreciendo una narrativa documentada que desarticula mitos populares y ofrece una reconstrucción científica del trazado platense.",
+    "precio": 10800,
+    "disponible": false
+  },
+  {
+    "id": 5,
+    "titulo": "Los Doce Trabajos de Hércules",
+    "autor": "Enrique de Villena",
+    "imagen": "/img/hercules.jpg",
+    "descripcion": "Adaptación literaria inspirada en la mitología griega y las legendarias pruebas que Hércules debe superar para alcanzar la redención.",
+    "precio": 13700,
+    "disponible": true
+  },
+  {
+    "id": 6,
+    "titulo": "Ficciones",
+    "autor": "Jorge Luis Borges",
+    "imagen": "/img/ficciones.png",
+    "descripcion": "Una de las obras más importantes de Borges, compuesta por cuentos llenos de simbolismo, bibliotecas infinitas y realidades imposibles.",
+    "precio": 16400,
+    "disponible": true
+  }
+]
