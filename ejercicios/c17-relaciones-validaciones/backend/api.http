@@ -1,0 +1,162 @@
+@baseUrl = http://localhost:3000
+
+###############################################
+# LIBROS - CASOS CORRECTOS
+###############################################
+
+### Listar libros - 200
+GET {{baseUrl}}/api/libros
+
+### Filtrar libros disponibles - 200
+GET {{baseUrl}}/api/libros?disponible=true
+
+### Obtener detalle con autor y categorías - 200
+GET {{baseUrl}}/api/libros/1
+
+### Crear libro - 201
+# @name crearLibro
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "La invención de Morel",
+  "precio": 15000,
+  "imagen": "/img/morel.jpg",
+  "descripcion": "Una novela fantástica de Adolfo Bioy Casares.",
+  "disponible": true,
+  "autorId": 1
+}
+
+### Actualizar el libro creado - 200
+PUT {{baseUrl}}/api/libros/{{crearLibro.response.body.$.id}}
+Content-Type: application/json
+
+{
+  "precio": 16500
+}
+
+### Borrar el libro creado - 204
+DELETE {{baseUrl}}/api/libros/{{crearLibro.response.body.$.id}}
+
+### Borrar nuevamente el libro - 404
+DELETE {{baseUrl}}/api/libros/{{crearLibro.response.body.$.id}}
+
+
+###############################################
+# LIBROS - CASOS DE ERROR
+###############################################
+
+### ID inválido - 400
+GET {{baseUrl}}/api/libros/abc
+
+### Libro inexistente - 404
+GET {{baseUrl}}/api/libros/9999
+
+### Libro sin título - 400
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "precio": 5000,
+  "imagen": "/img/invalido.jpg",
+  "descripcion": "Este libro no tiene título.",
+  "autorId": 1
+}
+
+### Precio negativo - 400
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Libro inválido",
+  "precio": -500,
+  "imagen": "/img/invalido.jpg",
+  "descripcion": "Este libro tiene un precio inválido.",
+  "autorId": 1
+}
+
+### Autor inexistente - 409 por P2003
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Libro huérfano",
+  "precio": 5000,
+  "imagen": "/img/huerfano.jpg",
+  "descripcion": "El autor indicado no existe.",
+  "autorId": 9999
+}
+
+### Actualizar libro inexistente - 404
+PUT {{baseUrl}}/api/libros/9999
+Content-Type: application/json
+
+{
+  "precio": 20000
+}
+
+
+###############################################
+# AUTORES - CASOS CORRECTOS
+###############################################
+
+### Listar autores - 200
+GET {{baseUrl}}/api/autores
+
+### Obtener un autor - 200
+GET {{baseUrl}}/api/autores/1
+
+### Crear autor - 201
+# @name crearAutor
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Julio Cortázar",
+  "nacionalidad": "Argentina"
+}
+
+### Actualizar el autor creado - 200
+PUT {{baseUrl}}/api/autores/{{crearAutor.response.body.$.id}}
+Content-Type: application/json
+
+{
+  "nacionalidad": "Argentina y Francia"
+}
+
+### Borrar el autor creado - 204
+DELETE {{baseUrl}}/api/autores/{{crearAutor.response.body.$.id}}
+
+### Borrar nuevamente el autor - 404
+DELETE {{baseUrl}}/api/autores/{{crearAutor.response.body.$.id}}
+
+
+###############################################
+# AUTORES - CASOS DE ERROR
+###############################################
+
+### ID de autor inválido - 400
+GET {{baseUrl}}/api/autores/abc
+
+### Autor inexistente - 404
+GET {{baseUrl}}/api/autores/9999
+
+### Autor sin nombre - 400
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+  "nacionalidad": "Argentina"
+}
+
+### Autor duplicado - 409 por P2002
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Jorge Luis Borges",
+  "nacionalidad": "Argentina"
+}
+
+### Borrar autor que tiene libros - 409 por P2003
+DELETE {{baseUrl}}/api/autores/1
