@@ -1,0 +1,137 @@
+@baseUrl = http://localhost:3000
+
+###############################################
+# AUTENTICACIÓN
+###############################################
+
+### 1. Registrar usuario - 201, sin passwordHash
+POST {{baseUrl}}/api/auth/registro
+Content-Type: application/json
+
+{
+  "nombre": "Ana",
+  "email": "ana@libreria.test",
+  "password": "Libreria2026"
+}
+
+### 2. Registrar nuevamente el mismo email - 409
+POST {{baseUrl}}/api/auth/registro
+Content-Type: application/json
+
+{
+  "nombre": "Ana",
+  "email": "ana@libreria.test",
+  "password": "Libreria2026"
+}
+
+### 3. Contraseña débil - 400 con tres detalles
+POST {{baseUrl}}/api/auth/registro
+Content-Type: application/json
+
+{
+  "nombre": "Usuario inseguro",
+  "email": "inseguro@libreria.test",
+  "password": "corta"
+}
+
+### 4. Login con email inexistente - 401
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "noexiste@libreria.test",
+  "password": "Cliente1234"
+}
+
+### 5. Login con contraseña incorrecta - 401
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "cliente@libreria.test",
+  "password": "Incorrecta123"
+}
+
+### 6. Login correcto de CLIENTE - 200
+# @name loginCliente
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "cliente@libreria.test",
+  "password": "Cliente1234"
+}
+
+### Token del cliente
+@tokenCliente = {{loginCliente.response.body.token}}
+
+### Login correcto de ADMIN - 200
+# @name loginAdmin
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@libreria.test",
+  "password": "Admin1234"
+}
+
+### Token del administrador
+@tokenAdmin = {{loginAdmin.response.body.token}}
+
+
+###############################################
+# IDENTIDAD
+###############################################
+
+### 7. /yo sin token - 401
+GET {{baseUrl}}/api/auth/yo
+
+### 8. /yo con token de CLIENTE - 200
+GET {{baseUrl}}/api/auth/yo
+Authorization: Bearer {{tokenCliente}}
+
+
+###############################################
+# PERMISOS DE LIBROS
+###############################################
+
+### 9. Crear libro sin token - 401
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Libro seguro",
+  "precio": 12000,
+  "imagen": "/img/seguro.jpg",
+  "descripcion": "Prueba de autenticación.",
+  "autorId": 1
+}
+
+### 10. Crear libro como CLIENTE - 403
+POST {{baseUrl}}/api/libros
+Authorization: Bearer {{tokenCliente}}
+Content-Type: application/json
+
+{
+  "titulo": "Libro del cliente",
+  "precio": 12000,
+  "imagen": "/img/cliente.jpg",
+  "descripcion": "El cliente no tiene permiso para crearlo.",
+  "autorId": 1
+}
+
+### 11. Crear libro como ADMIN - 201
+POST {{baseUrl}}/api/libros
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "titulo": "Libro del administrador",
+  "precio": 15000,
+  "imagen": "/img/admin.jpg",
+  "descripcion": "El administrador sí puede crearlo.",
+  "autorId": 1
+}
+
+### 12. Listar libros sin token - 200
+GET {{baseUrl}}/api/libros
