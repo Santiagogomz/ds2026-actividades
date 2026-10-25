@@ -170,6 +170,18 @@ El Blueprint se llama `libreria-ai-c23`. No crear servicios duplicados: para act
 
 GitHub Pages es opcional. Fecha límite de la consigna: 15/11/2026.
 
+## Mensaje de entrega
+
+Publicar en #actividades, hilo [AI-C23] Deploy en la Librería:
+
+```text
+AI-C23 completada.
+Frontend: https://libreria-ai-c23-web.onrender.com
+Backend: https://libreria-ai-c23-api.onrender.com
+Repositorio: https://github.com/Santiagogomz/ds2026-actividades/tree/main/ejercicios/c23-deploy-entornos
+Probé login, CRUD completo, permisos y refresco en una ruta interna.
+```
+
 ## Documentación
 
 - https://render.com/docs/docker
