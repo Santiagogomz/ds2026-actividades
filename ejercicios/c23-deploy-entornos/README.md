@@ -18,7 +18,7 @@ Servicios gratuitos en Render y proyecto Neon en AWS Ohio. No se necesita el ent
 - Imagen Docker de producción construida y probada con PostgreSQL temporal: migraciones, seed, login de ambos roles, CRUD completo, persistencia y permisos correctos. Los recursos temporales de prueba se retiraron al terminar.
 - Verificación pública del 25/10/2026: catálogo con tres libros, login ADMIN/CLIENTE, CRUD completo, persistencia, CORS y restricciones 401/403 correctos. Se retiró el libro temporal creado para la prueba.
 - Verificación en navegador: login de administrador, catálogo y recarga directa de `/catalogo` sin 404.
-- Render configurado con Auto-Deploy On Commit desde main.
+- Render configurado con Auto-Deploy On Commit desde main. Verificado: el push de `e40e12d` disparó automáticamente el build del frontend (trigger Auto-Deploy). La integración de GitHub quedó autorizada únicamente para este repositorio.
 - Pendiente del estudiante: aviso de entrega en Discord, hilo `[AI-C23] Deploy en la Librería`.
 
 ## Arquitectura
