@@ -16,7 +16,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: FRONTEND_URL
-        sync: false
+        value: https://libreria-ai-c23-web.onrender.com
 
   - type: web
     name: libreria-ai-c23-web
@@ -28,7 +28,7 @@ services:
     autoDeployTrigger: commit
     envVars:
       - key: VITE_API_URL
-        sync: false
+        value: https://libreria-ai-c23-api.onrender.com/api
     routes:
       - type: rewrite
         source: /*

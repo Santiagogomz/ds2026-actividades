@@ -1,14 +1,25 @@
 # [AI-C23] Deploy en la Librería
 
-Trabajo individual basado en AI-C21, preparado para publicar backend y frontend en Render con PostgreSQL en Neon.
+Trabajo individual basado en AI-C21, publicado en Render con PostgreSQL en Neon.
+
+## URLs públicas
+
+- Frontend: https://libreria-ai-c23-web.onrender.com
+- Backend: https://libreria-ai-c23-api.onrender.com
+- API: https://libreria-ai-c23-api.onrender.com/api
+- Health check: https://libreria-ai-c23-api.onrender.com/api/health
+
+Servicios gratuitos en Render y proyecto Neon en AWS Ohio. No se necesita el entorno local encendido para usar la aplicación pública. El backend gratuito puede tardar en despertar tras estar inactivo.
 
 ## Estado
 
 - Código de producción preparado.
 - Verificación local: builds correctos y 14 tests aprobados (11 backend y 3 frontend).
 - Imagen Docker de producción construida y probada con PostgreSQL temporal: migraciones, seed, login de ambos roles, CRUD completo, persistencia y permisos correctos. Los recursos temporales de prueba se retiraron al terminar.
-- Las URLs públicas quedan pendientes de crear/configurar los servicios con las cuentas de Neon y Render.
-- La actividad se termina cuando se verifican ambas URLs y se avisa en Discord, hilo `[AI-C23] Deploy en la Librería`.
+- Verificación pública del 25/10/2026: catálogo con tres libros, login ADMIN/CLIENTE, CRUD completo, persistencia, CORS y restricciones 401/403 correctos. Se retiró el libro temporal creado para la prueba.
+- Verificación en navegador: login de administrador, catálogo y recarga directa de `/catalogo` sin 404.
+- Render configurado con Auto-Deploy On Commit desde main.
+- Pendiente del estudiante: aviso de entrega en Discord, hilo `[AI-C23] Deploy en la Librería`.
 
 ## Arquitectura
 
@@ -138,13 +149,13 @@ La URL ingresada no se muestra en pantalla ni se escribe literalmente en el hist
 
 ### Alternativa: Blueprint
 
-`render.yaml` permite definir ambos servicios desde Render → New → Blueprint, seleccionando como Blueprint Path:
+Los servicios actuales fueron creados con `render.yaml` desde Render → New → Blueprint, seleccionando como Blueprint Path:
 
 ```text
 ejercicios/c23-deploy-entornos/render.yaml
 ```
 
-No aplicar además el Blueprint si ya se crearon los servicios manualmente. Las variables marcadas `sync: false` deben completarse en Render; el archivo no contiene credenciales ni URLs públicas inventadas. Si se usa esta alternativa, completar las URLs reales de los servicios y redeployar después de que Render las asigne. `JWT_SECRET` se genera automáticamente.
+El Blueprint se llama `libreria-ai-c23`. No crear servicios duplicados: para actualizar, usar el Blueprint existente. La variable `DATABASE_URL`, marcada `sync: false`, se configura únicamente en Render; el archivo no contiene credenciales. Las URLs del frontend y de la API son públicas y están versionadas. `JWT_SECRET` se genera automáticamente.
 
 ## Comprobación de la entrega
 
@@ -154,7 +165,7 @@ No aplicar además el Blueprint si ya se crearon los servicios manualmente. Las 
 - Verificar persistencia tras refrescar.
 - Abrir una ruta interna y presionar F5: no debe devolver 404.
 - Verificar `/api/health` y `/api/libros` en el backend público.
-- Registrar las URLs públicas reales en este README al completar el deploy.
+- Las URLs públicas verificadas están al comienzo de este README.
 - Avisar en Discord → #actividades → hilo [AI-C23] Deploy en la Librería, con las dos URLs y el repositorio. Compartir credenciales de prueba por el canal que indique la cátedra, no agregar secretos al README.
 
 GitHub Pages es opcional. Fecha límite de la consigna: 15/11/2026.
