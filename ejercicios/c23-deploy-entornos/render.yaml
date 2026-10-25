@@ -3,7 +3,7 @@ services:
     name: libreria-ai-c23-api
     runtime: docker
     plan: free
-    region: virginia
+    region: ohio
     branch: main
     rootDir: ejercicios/c23-deploy-entornos/backend
     dockerfilePath: ./Dockerfile.prod

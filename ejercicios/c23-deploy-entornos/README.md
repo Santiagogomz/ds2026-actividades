@@ -79,7 +79,7 @@ Crear un Web Service conectado a este repositorio:
 | Dockerfile Path | Dockerfile.prod |
 | Docker Build Context | . |
 | Instance Type | Free |
-| Region | Virginia, si está disponible |
+| Region | Ohio (misma región que el proyecto Neon creado) |
 | Health Check Path | /api/health |
 | Docker Command | vacío: usa el CMD del Dockerfile |
 
